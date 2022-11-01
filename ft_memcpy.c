@@ -1,24 +1,30 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bcriscim <bcriscim@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/25 19:00:05 by bcriscim          #+#    #+#             */
+/*   Updated: 2022/11/01 13:00:06 by bcriscim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+#include "Libft.h"
+/*Copia n caract. de src a dst. Si hay overlaping es indefinido*/
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    int i;
+	size_t		i;
+	char		*dest;
+	const char	*srce;
 
-    if (src <= dst)
-    {
-        i = 0;
-        while (i <= n)
-        {
-            (char *)dst + i == (char *)src + i;
-            i++;
-        }
-    }
+	i = 0;
+	dest = dst;
+	srce = src;
+	while (i < n)
+	{
+		dest[i] = srce[i];
+		i++;
+	}
+	return (dst);
 }
-
-/*DESCRIPTION
-     The memcpy() function copies n bytes from memory area src to memory area dst.  If
-     dst and src overlap, behavior is undefined.  Applications in which dst and src
-     might overlap should use memmove() instead.
-
-RETURN VALUES
-     The memcpy() function returns the original value of dst.*/
