@@ -1,16 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcriscim <bcriscim@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 19:52:27 by bcriscim          #+#    #+#             */
-/*   Updated: 2022/11/02 18:43:40 by bcriscim         ###   ########.fr       */
+/*   Created: 2022/11/09 12:07:20 by bcriscim          #+#    #+#             */
+/*   Updated: 2022/11/09 12:24:16 by bcriscim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "Libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	return (c >= 0 && c < 128);
+	char	*ptr;
+	int		i;
+	int		j;
+
+	j = 0;
+	i = 0;
+	ptr = NULL;
+	ptr = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!ptr)
+		return (0);
+	while (ptr[i] != '\0' && s1[i] != '\0')
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	while (ptr[i] != '\0' && s2[j] != '\0')
+	{
+		ptr[i] = s2[j];
+		i++;
+		j++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }

@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcriscim <bcriscim@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 19:52:27 by bcriscim          #+#    #+#             */
-/*   Updated: 2022/11/02 18:43:40 by bcriscim         ###   ########.fr       */
+/*   Created: 2022/11/09 12:22:31 by bcriscim          #+#    #+#             */
+/*   Updated: 2022/11/09 12:41:15 by bcriscim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "Libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	return (c >= 0 && c < 128);
+	int i;
+
+	i = 0;
 }

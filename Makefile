@@ -6,7 +6,7 @@
 #    By: bcriscim <bcriscim@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/27 18:56:29 by bcriscim          #+#    #+#              #
-#    Updated: 2022/11/01 11:51:23 by bcriscim         ###   ########.fr        #
+#    Updated: 2022/11/09 12:23:42 by bcriscim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,11 @@ SRCS = ft_isalpha.c \
 		ft_memset.c \
 		ft_strlcat.c \
 		ft_strnstr.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_strjoin.c \
+		ft_strtrim.c
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
